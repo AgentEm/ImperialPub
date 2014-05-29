@@ -1,11 +1,10 @@
 <?php
 
 /*
-	Template Name: Full Page, No Sidebar
+	Template Name: About Page
 */ 
 
 get_header();  ?>
-
 <div class="section">
   <div class="innerWrapper">
     <div class="full">
@@ -14,9 +13,10 @@ get_header();  ?>
 
         <h2><?php the_title(); ?></h2>
         <?php the_content(); ?>
-
+        
       <?php endwhile; // end the loop?>
     </div>
   </div> <!-- /.innerWrapper -->
 </div> <!-- /.section -->
+<?php get_sidebar(); ?>
 <?php get_footer(); ?>

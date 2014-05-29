@@ -1,10 +1,10 @@
 /*
-Theme Name: HY Theme 
-Theme URI: http://hackeryou.com;
-Description: Starter theme for building any website. Created by Wes Bos. Rename this to your own theme page.
+Theme Name: Imperial Pub Theme
+Theme URI: http://emilyporta.com;
+Description: Theme for the Imperial Pub in Toronto, Ontario, Canada.
 Version: 1.0
-Author: Wes Bos
-Author URI: http://wesbos.com
+Author: Emily Porta
+Author URI: http://emilyporta.com
 */
 
 
@@ -36,10 +36,27 @@ img.alignright    { padding-left: 5px; }
                    Default Styling 
    ========================================================================== */
 
-body {
-  color:#333;
+@font-face{
+    font-family: "Shoutest shadowed";
+    src: url('Shoutestshadowed.otf')
 }
 
+body {
+  color:#333;
+  background-color: #CF000F;
+}
+h1 a {
+  color:#EEE;
+  font-family: "Shoutest shadowed";
+  font-size: 3.5em;
+  text-align: center;
+  display: block;
+  font-weight: normal;
+  margin-bottom: 10%;
+}
+h1 img {
+  vertical-align: text-bottom;
+}
 a {
   color:#D12028;
   text-decoration: none;
@@ -54,6 +71,7 @@ a {
   float:left;
   width:68%;
   margin-right: 2%;
+  background-color: #EEE;
 
 }
 
@@ -126,26 +144,39 @@ pre {
 
 .footer {
   clear:both;
+  background-color: #EEE;
+  height:10em;
+  padding:3%;
 }
 
 
 /* =============================================================================
                    Navigation 
    ========================================================================== */
-  ul.menu {
+  .menu {
+    text-align: right;
+    margin-top: 3%;
+  }
+  .menu ul{
     margin:0;
     padding:0;
+    list-style: none;
   }
-    ul.menu li {
-      display:inline;
-      margin-right: 10px;
+    .menu li {
+      display:inline-block;
+      padding:0;
     }
 
-      ul.menu li a {
-        color:#333;
-        padding:10px;
-        background:#333;
-        color:white;
+      .menu ul li a {
+        color:#EEE;
+        padding:1em;
+        margin-left: 1em;
+        border-bottom: 5px double #EEE;
+        border-radius: 10%;
+        display: inline-block;
+      }
+      .menu ul li a:hover {
+            /*??????*/
       }
 
 
