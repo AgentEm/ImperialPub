@@ -23,6 +23,8 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 	<script>!window.jQuery && document.write('<script src="<?php bloginfo('template_directory');?>/js/jQuery.js"><\/script>')</script>
 	<script src="<?php bloginfo('stylesheet_directory');?>/js/scripts.js"></script>
+  <link rel="stylesheet" href="<?php bloginfo('stylesheet_directory');?>/js/FlexSlider/flexslider.css" type="text/css">
+  <script src="<?php bloginfo('stylesheet_directory');?>/js/FlexSlider/jquery.flexslider.js"></script>
 </head>
 
 

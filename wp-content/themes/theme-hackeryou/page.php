@@ -2,7 +2,21 @@
 <div class="section">
   <div class="innerWrapper">
     <div class="full clearfix">
-      <div class="main"></div>
+      <div class="main">
+        <div class="flexslider">
+          <ul class="slides">
+            <li>
+              <img src="<?php echo get_template_directory_uri(); ?>/images/patio.jpg">
+            </li>
+            <li>
+              <img src="<?php echo get_template_directory_uri(); ?>/images/bar.jpg">
+            </li>
+            <li>
+              <img src="<?php echo get_template_directory_uri(); ?>/images/upstairs.jpg">
+            </li>
+          </ul>
+        </div>
+      </div>
       <div class="three first"></div>
       <div class="three second"></div>
       <div class="three third">
