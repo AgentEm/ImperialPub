@@ -25,6 +25,44 @@
 	<script src="<?php bloginfo('stylesheet_directory');?>/js/scripts.js"></script>
   <link rel="stylesheet" href="<?php bloginfo('stylesheet_directory');?>/js/FlexSlider/flexslider.css" type="text/css">
   <script src="<?php bloginfo('stylesheet_directory');?>/js/FlexSlider/jquery.flexslider.js"></script>
+  <!-- change the api key! --> <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB7iW34C8RU6mlSGN4dGcmwysYUtN34zPY&sensor=false"></script>
+  <script type="text/javascript">
+      // When the window has finished loading create our google map below
+      google.maps.event.addDomListener(window, 'load', init);
+  
+      function init() {
+          var myLatLng = new google.maps.LatLng(43.656245, -79.37882);
+          var mapOptions = {
+              zoom: 15,
+              center: myLatLng,
+              mapTypeControl: true,
+              mapTypeControlOptions: {
+                style: google.maps.MapTypeControlStyle.HORIZONTAL_BAR
+              },
+              scaleControl: true,
+              zoomControl: true,
+              zoomControlOptions: {
+                style: google.maps.ZoomControlStyle.DEFAULT,
+              },
+              styles: [{stylers:[{saturation:-100},{gamma:1}]},{elementType:"labels.text.stroke",stylers:[{visibility:"on"}]},{featureType:"poi.business",elementType:"labels.text",stylers:[{visibility:"off"}]},{featureType:"poi.business",elementType:"labels.icon",stylers:[{visibility:"off"}]},{featureType:"poi.place_of_worship",elementType:"labels.text",stylers:[{visibility:"off"}]},{featureType:"poi.place_of_worship",elementType:"labels.icon",stylers:[{visibility:"off"}]},{featureType:"road",elementType:"geometry",stylers:[{visibility:"simplified"}]},{featureType:"water",stylers:[{visibility:"on"},{saturation:50},{gamma:0},{hue:"#50a5d1"}]},{featureType:"administrative.neighborhood",elementType:"labels.text.fill",stylers:[{color:"#333333"}]},{featureType:"road.local",elementType:"labels.text",stylers:[{weight:0.5},{color:"#333333"}]},{featureType:"transit.station",elementType:"labels.icon",stylers:[{gamma:1},{saturation:50}]}]
+          };
+
+          // Get the HTML DOM element that will contain your map
+          var mapElement = document.getElementById('map');
+
+          // Create the Google Map using our element and options defined above
+          var map = new google.maps.Map(mapElement, mapOptions);
+          
+          //creating marker at myLatLng
+          var marker = new google.maps.Marker({
+                position: myLatLng,
+                map: map,
+                title:"The Imperial Pub",
+                icon:"<?php echo get_template_directory_uri(); ?>/images/beer.png",
+                animation: google.maps.Animation.BOUNCE
+            });
+      }
+  </script>
 </head>
 
 

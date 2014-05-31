@@ -87,6 +87,9 @@ a {
   margin-bottom: 3%;
   display: inline-block;
 }
+.main .contact {
+  display: block;
+}
 .three {
   width:30%;
   height:250px; /*change this*/
@@ -94,6 +97,29 @@ a {
   margin-bottom: 3%;
   background-color: #EEE;
   float:left;
+}
+
+.three .button {
+  background-color: #2C3E50;
+  color:#EEE;
+  text-align: center;
+  margin: 0 15%;
+  border-radius: 0.3em;
+  padding:5% 0;
+  transition: all 0.3s;
+}
+
+.three .button:hover {
+  background-color: #EEE;
+  border: 2px solid #2C3E50;
+  color:#2C3E50;
+}
+
+.contact img {
+  max-width: none;
+}
+#map {
+  height:25em;
 }
 
 /*blockquotes*/

@@ -16,9 +16,15 @@
             </li>
           </ul>
         </div>
+      </div> <!-- /.main -->
+      <div class="three first">
+        <h3>Content</h3>
+        <div class="button">Button One</div>
       </div>
-      <div class="three first"></div>
-      <div class="three second"></div>
+      <div class="three second">
+        <h3>Content</h3>
+        <div class="button">Button Two</div>
+      </div>
       <div class="three third">
         <?php // Start the loop ?>
         <?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
@@ -27,11 +33,13 @@
           <?php the_content(); ?>
         
         <?php endwhile; // end the loop?>
+        <div class="button">Button Three</div>
       </div>
       <div class="main contact">
         <h3>Contact Us</h3>
+        <div id="map"></div>
       </div>
-    </div>
+    </div> <!-- /full clearfix -->
   </div> <!-- /.innerWrapper -->
 </div> <!-- /.section -->
 <?php get_footer(); ?>
