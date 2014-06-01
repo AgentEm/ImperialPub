@@ -1,8 +1,10 @@
 <div class="footer">
 	<div class="innerWrapper">
-    <p>Design and Code &copy; Emily Porta <?php echo date('Y'); ?></p>
-    <?php wp_footer(); ?>
+    	<?php wp_footer(); ?>
   </div>
+</div>
+<div class="copyright">
+	<p>Design and Code &copy; <a href="http://emilyporta.com">Emily Porta</a> <?php echo date('Y'); ?></p>
 </div>
 
 <script>

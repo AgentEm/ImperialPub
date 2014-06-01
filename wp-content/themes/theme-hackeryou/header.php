@@ -27,9 +27,8 @@
   <script src="<?php bloginfo('stylesheet_directory');?>/js/FlexSlider/jquery.flexslider.js"></script>
   <!-- change the api key! --> <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB7iW34C8RU6mlSGN4dGcmwysYUtN34zPY&sensor=false"></script>
   <script type="text/javascript">
-      // When the window has finished loading create our google map below
       google.maps.event.addDomListener(window, 'load', init);
-  
+
       function init() {
           var myLatLng = new google.maps.LatLng(43.656245, -79.37882);
           var mapOptions = {
@@ -53,6 +52,13 @@
           // Create the Google Map using our element and options defined above
           var map = new google.maps.Map(mapElement, mapOptions);
           
+          //Adding an infobox on click of beer icon
+          var contentString = '<div id="mapInfoContainer" style="width:200px; text-align:center; padding:1%">' + '<h3>The Imperial Pub</h3>' +
+          '<p>54 Dundas Street East</p>' + '<p>Toronto, ON M5B 1C7</p>' + '416-977-4667' + '</div>'
+          var infowindow = new google.maps.InfoWindow({
+            content: contentString,
+          });
+
           //creating marker at myLatLng
           var marker = new google.maps.Marker({
                 position: myLatLng,
@@ -61,8 +67,15 @@
                 icon:"<?php echo get_template_directory_uri(); ?>/images/beer.png",
                 animation: google.maps.Animation.BOUNCE
             });
+
+          google.maps.event.addListener(marker, "click", function(){
+            infowindow.open(map,marker);
+          });
       }
+
   </script>
+  <link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+  <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
 </head>
 
 
