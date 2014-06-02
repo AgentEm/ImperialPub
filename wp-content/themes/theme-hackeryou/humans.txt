@@ -3,10 +3,10 @@
 
 
 /* TEAM */
-  <your title>: <your name>
-  Site: 
-  Twitter: 
-  Location: 
+  <Developer>: <Emily Porta>
+  Site: http://emilyporta.com
+  Twitter: @agentemily
+  Location: Toronto, Ontario, Canada
 
 /* THANKS */
   Default theme from Wes Bos - http://wesbos.com 
